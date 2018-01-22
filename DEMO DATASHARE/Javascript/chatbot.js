@@ -322,6 +322,11 @@ function check_basic_string(input)
 		document.getElementById('information_container').innerHTML = "*** *** ****** ***** ******* ** ***** ********** ************* * :) pd";
 		return result;
 	}
+	if (input.search('raining')!=-1)
+	{
+		document.getElementById('information_container').innerHTML = "I don't think it's raining, you can go outside";
+		return result;
+	}
 	
 	result = true;
 	return result;	

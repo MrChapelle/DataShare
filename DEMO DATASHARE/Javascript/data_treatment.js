@@ -175,7 +175,36 @@ function weather_indoor_data_treatment(question_parameters)
 //101
 function weather_outdoor_data_treatment(question_parameters)
 {
-	console.log("function case :101");
+	document.getElementById('information_container').innerHTML = "The last registered outdoor humidity is : <br><b>" + current_outdoor_humidity.toFixed(3) + "<br></b>";
+
+	avg_humidity_last_year = 0 ;
+
+	for (var i = 0 ; i < avg_outdoor_humidity_day.length ; i++)
+	{
+		avg_humidity_last_year += avg_outdoor_humidity_day[i].avg;
+	}
+	avg_humidity_last_year /= avg_outdoor_humidity_day.length;
+
+	document.getElementById('information_container').innerHTML = "Last year the average outdoor humidity was : <br><b>" + avg_humidity_last_year.toFixed(3) + "<br></b>";
+
+	var asked_humidity = 0;
+
+	if (question_parameters[3] != "no dates specified")
+	{
+		if (question_parameters.length == 4)
+		{
+			for (var i = 0 ; i < avg_outdoor_humidity_day.length ; i++)
+			{
+				if (avg_outdoor_humidity_day[i].date == question_parameters[3])
+				{
+					document.getElementById('information_container').innerHTML += "You also asked the outdoor humidity at the date : <br><b> " + avg_outdoor_humidity_day[i].date + 
+					"</b><br> which is : <br><b> " + (avg_outdoor_humidity_day[i].avg).toFixed(3) + " </b><br>";
+					document.getElementById('information_container').innerHTML += "Luminosity outside is <b>not defined</b> at this date <br>";
+					break;
+				}
+			}
+		}
+	}
 }
 
 //110
