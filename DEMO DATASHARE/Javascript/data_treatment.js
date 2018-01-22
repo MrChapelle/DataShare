@@ -12,7 +12,7 @@ function max_weight_data_treatment(question_parameters)
 		}
 	}
 	document.getElementById('information_container').innerHTML = "Your last registered weight is : <br><b>" + current_weight + " kg<br></b> Your maximum weight last year was : <br><b>" + 
-																max_weight_last_year + " kg<br></b>" + "at the date : <br><b>" + max_weight_date +"</b><br>";
+																  max_weight_last_year + " kg<br></b>" + "at the date : <br><b>" + max_weight_date +"</b><br>";
 	if (question_parameters[3]!="no dates specified")
 	{
 		if (question_parameters.length == 4)
@@ -94,13 +94,15 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was : <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
 
 	var avg_distance_each_month = 0;
-	var avg_steps_each_month = 0;
+	
 	for (var i = 0 ; i < average_distance_each_month.length ; i++)
 	{
 		avg_distance_each_month += average_distance_each_month[i].avg;
 	}
 	average_distance_each_month /= 12;
 	document.getElementById('information_container').innerHTML += "Each month you walked an average distance of : <br><b> " + avg_distance_each_month.toFixed(3) + " km<br></b>";
+
+	var avg_steps_each_month = 0;
 
 	for (var i = 0 ; i < avg_steps_month.length ; i++)
 	{
@@ -124,15 +126,50 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 			}
 		}
 	}
-
-
-
 }
 
 //100
 function weather_indoor_data_treatment(question_parameters)
 {
-	console.log("function case :100");
+	document.getElementById('information_container').innerHTML = "The last registered illuminance is : <br><b>" + current_illuminance.toFixed(3) + "<br></b>";
+	document.getElementById('information_container').innerHTML += "The last registered humidity is : <br><b>" + current_humidity.toFixed(3) + "<br></b>";
+	document.getElementById('information_container').innerHTML += "The maximum registered indoor humidity last year was : <br><b>" + max_indoor_humidity_year_2017 + "<br></b>";
+
+	var avg_indoor_humidity = 0;
+	var avg_indoor_luminosity = 0;
+
+	for (var i = 0 ; i < avg_indoor_humidity_day.length ; i++)
+	{
+		avg_indoor_humidity += avg_indoor_humidity_day[i].avg;
+	}
+	avg_indoor_humidity /= avg_indoor_humidity_day.length;
+
+	for (var i = 0 ; i <  avg_indoor_illuminance_day_2018.length ; i++)
+	{
+		avg_indoor_luminosity +=  avg_indoor_illuminance_day_2018[i].avg;
+	}
+	avg_indoor_luminosity /=  avg_indoor_illuminance_day_2018.length;
+
+
+	document.getElementById('information_container').innerHTML += "The average indoor humidity is : <br><b> " + avg_indoor_humidity.toFixed(3) + " <br></b>";
+	document.getElementById('information_container').innerHTML += "The average indoor luminosity is : <br><b> " + avg_indoor_luminosity.toFixed(3) + " <br></b>";
+
+	if (question_parameters[3] != "no dates specified")
+	{
+		if (question_parameters.length == 4)
+		{
+			for (var i = 0 ; i < avg_indoor_humidity_day.length ; i++)
+			{
+				if (avg_indoor_humidity_day[i].date == question_parameters[3])
+				{
+					document.getElementById('information_container').innerHTML += "You also asked the indoor humidity at the date : <br><b> " + avg_indoor_humidity_day[i].date + 
+					"</b><br> which is : <br><b> " + (avg_indoor_humidity_day[i].avg).toFixed(3) + " </b><br>";
+					document.getElementById('information_container').innerHTML += "Luminosity is <b>not defined</b> at this date <br>";
+					break;
+				}
+			}
+		}
+	}
 }
 
 //101

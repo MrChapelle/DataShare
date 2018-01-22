@@ -1,4 +1,6 @@
-var avg_illuminance_day_2018 = 
+var current_illuminance = 53.657546451222;
+
+var avg_indoor_illuminance_day_2018 = 
 [
   {
     "date": "2018-01-16T00:00:00Z",
