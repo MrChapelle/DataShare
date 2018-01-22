@@ -44,10 +44,12 @@ function max_speed_data_treatment(question_parameters)
 					if(max_speed_vehicle_day[i].max == 0)
 					{
 						document.getElementById('information_container').innerHTML += "You didn't drive at the date : <b>" + question_parameters[3] ;
+						break;
 					}
 					if(max_speed_vehicle_day[i].max != 0)
 					{
 						document.getElementById('information_container').innerHTML += "Your maximum speed at the date : <b>" + question_parameters[3] + "</b><br>was <b>" + max_speed_vehicle_day[i].max + " km/h<br></b>";
+						break;
 					}
 				}
 			}
@@ -78,6 +80,7 @@ function avg_weight_data_treatment(question_parameters)
 				if (avg_weight_month[i].date == question_parameters[3])
 				{
 					document.getElementById('information_container').innerHTML += "Your average weight at the date : <b>" + question_parameters[3] + "</b><br>was <b>" + avg_weight_month[i].avg + " kg<br></b>";
+					break;
 				}
 			}
 		}
@@ -87,8 +90,43 @@ function avg_weight_data_treatment(question_parameters)
 //012
 function avg_distance_and_steps_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The distance you walked last year is <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
-	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
+	document.getElementById('information_container').innerHTML = "The distance you walked last year is : <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
+	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was : <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
+
+	var avg_distance_each_month = 0;
+	var avg_steps_each_month = 0;
+	for (var i = 0 ; i < average_distance_each_month.length ; i++)
+	{
+		avg_distance_each_month += average_distance_each_month[i].avg;
+	}
+	average_distance_each_month /= 12;
+	document.getElementById('information_container').innerHTML += "Each month you walked an average distance of : <br><b> " + avg_distance_each_month.toFixed(3) + " km<br></b>";
+
+	for (var i = 0 ; i < avg_steps_month.length ; i++)
+	{
+		avg_steps_each_month += avg_steps_month[i].avg;
+	}
+	avg_steps_each_month /= 12;
+	document.getElementById('information_container').innerHTML += "Each month you walked an average number of steps of : <br><b> " + avg_steps_each_month.toFixed(3) + " steps<br></b>";
+
+	if (question_parameters[3] != "no dates specified")
+	{
+		if (question_parameters.length == 4)
+		{
+			for (var i = 0 ; i < average_distance_each_day.length ; i++)
+			{
+				if (average_distance_each_day[i].date == question_parameters[3])
+				{
+					document.getElementById('information_container').innerHTML += "You also asked the distance you walked at the date : <br><b> " + average_distance_each_day[i].date + 
+					"</b><br> which is : <br><b> " + (average_distance_each_day[i].avg).toFixed(3) + " km</b><br>";
+					break;
+				}
+			}
+		}
+	}
+
+
+
 }
 
 //100
