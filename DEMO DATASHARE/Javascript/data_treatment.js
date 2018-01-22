@@ -210,11 +210,31 @@ function weather_outdoor_data_treatment(question_parameters)
 //110
 function temperature_indoor_data_treatment(question_parameters)
 {
-	console.log("function case :110");
+	document.getElementById('information_container').innerHTML = "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018 + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2017 is : <br><b>" + max_indoor_temperature_year_2017 + " °C<br></b>";
+
+	var avg_temp_indoor = 0;
+
+	for ( var i = 0 ; i < avg_indoor_temperature_day.length; i++)
+	{
+		avg_temp_indoor += avg_indoor_temperature_day[i].avg;
+	}
+	avg_temp_indoor /= avg_indoor_temperature_day.length
+
+	document.getElementById('information_container').innerHTML += "The average indoor temperature registered in 2018 is : <br><b>" + avg_temp_indoor.toFixed(3) + " °C<br></b>";
 }
 
 //111
 function temperature_outdoor_data_treatment(question_parameters)
 {
-	console.log("function case :111");
+	document.getElementById('information_container').innerHTML = "The last registered outdoor temperature is : <br><b>" + current_outdoor_temperature.toFixed(3) + " °C<br></b>";
+	var avg_temp_outdoor = 0;
+
+	for ( var i = 0 ; i < avg_outdoor_temperature_month.length; i++)
+	{
+		avg_temp_outdoor += avg_outdoor_temperature_month[i].avg;
+	}
+	avg_temp_outdoor /= avg_outdoor_temperature_month.length
+
+	document.getElementById('information_container').innerHTML += "The average outdoor temperature registered in 2017 is : <br><b>" + avg_temp_outdoor.toFixed(3) + " °C<br></b>";
 }
