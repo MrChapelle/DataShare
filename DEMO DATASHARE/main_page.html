@@ -3,28 +3,116 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/style.css" media="screen" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     </head>
-    <body> 
+    <body>
 
-        <div id="slogan_container"><a href="https://developer.orange.com/apis/datashare/" target="_blank"><img id="slogan" src="Images/Datashare_Slogan.png" alt="DataShare Slogan"></a></div>
-        <div id="robot_container"><img id="robot" src="Images/giphy.gif" alt="Robot"></div>
-        <div id="datashare_icon_container"><a href="https://datashare.orange.com/dev/index.html" target="_blank"><img id="icon" src="Images/Icon.png" alt="Icon"></a></div>
-        <div id="dialog_container">
-            <label><h2>Ask to "Amine" Chatbot the information you desire</h2></label>
-            <input id="question_content" type="text" placeholder="desired information" name="information" required><br>
-            <input type="submit" id='submit' value='Send Question' onclick="main_function()">               
+
+    <a href="https://developer.orange.com/apis/datashare/" target="_blank">
+    <img src="Images/Datashare_Slogan.png" class="img-fluid" alt="Responsive image">
+    </a><br>
+
+    <div class="card text-center">
+        <div class="card-header">
+    <ul class="nav nav-pills">
+        <li class="nav-item" class="active"><a class="nav-link active" data-toggle="tab" href="#home">Question</a></li>
+        <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu1">Graphe</a></li>
+
+    </ul>
         </div>
 
-        <div id="information_container"><h2>Here will be displayed the answer to your requests</h2>
+
+        <div class="tab-content">
+        <div id="home" class="tab-pane fade in active show">
+            <div class="card-body">
+                <h5 class="card-title">Ask to "Amine" Chatbot the information you desire</h5>
+                <br>
+                <p class="card-text">
+                    <input id="question_content" class="form-control col-md-4"style="    margin-left: auto;
+                          margin-right: auto; border:1px solid #a785d8" type="text" placeholder="desired information" name="information" required>
+                    <br>
+                </p>
+
+
+                <button type="button " class="btn btn-vio  btn-lg btn-block col-md-4" style="    margin-left: auto;
+                 margin-right: auto" onclick="main_function()">Send Question</button>
+            </div>
+
+            <div class="card-footer text-muted">
+                <div id="information_container"><h6 >Here will be displayed the answer to your requests</h6>
+                </div>
+            </div>        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+
+            <canvas id="myChart" width="400" height="400"></canvas>
+
         </div>
 
-        <footer><img id="image_footer" src="https://cdn.dribbble.com/users/31664/screenshots/2350807/test-robot-2_1.gif" alt="Footer Image"></footer>
-    
-    <script src="Javascript/main.js"></script>
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <script src="Javascript/main.js"></script>
     <script src="Javascript/chatbot.js"></script>
     <script src="Javascript/data_treatment.js"></script>
 
-    <script src="Javascript/Data/available_data.js"></script>
+        <script src="Javascript/Data/available_data.js"></script>
     <script src="Javascript/Data/Fitbit/fitbit_steps_data.js"></script>
     <script src="Javascript/Data/Fitbit/fitbit_distance_data.js"></script>
     <script src="Javascript/Data/Vehicle/vehicle_speed_data.js"></script>
@@ -32,8 +120,12 @@
     <script src="Javascript/Data/Indoor/indoor_illuminance_data.js"></script>
     <script src="Javascript/Data/Indoor/indoor_humidity_data.js"></script>
     <script src="Javascript/Data/Outdoor/outdoor_temperature_data.js"></script>
-    <script src="Javascript/Data/Outdoor/outdoor_wind_speed_data.js"></script>  
-    <script src="Javascript/Data/Weight/weight_data.js"></script>  
+    <script src="Javascript/Data/Outdoor/outdoor_wind_speed_data.js"></script>
+    <script src="Javascript/Data/Weight/weight_data.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     </body>
 </html>
 
