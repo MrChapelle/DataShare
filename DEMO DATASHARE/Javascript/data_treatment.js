@@ -89,7 +89,6 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "The distance you walked last year is <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
 	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
-
 }
 
 //100
