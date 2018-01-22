@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css" media="screen" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body> 
+
+        <div id="slogan_container"><a href="https://developer.orange.com/apis/datashare/" target="_blank"><img id="slogan" src="Images/Datashare_Slogan.png" alt="DataShare Slogan"></a></div>
+        <div id="robot_container"><img id="robot" src="Images/giphy.gif" alt="Robot"></div>
+        <div id="datashare_icon_container"><a href="https://datashare.orange.com/dev/index.html" target="_blank"><img id="icon" src="Images/Icon.png" alt="Icon"></a></div>
+        <div id="dialog_container">
+            <label><h2>Ask to "Amine" Chatbot the information you desire</h2></label>
+            <input id="question_content" type="text" placeholder="desired information" name="information" required><br>
+            <input type="submit" id='submit' value='Send Question' onclick="main_function()">               
+        </div>
+
+        <div id="information_container"><h2>Here will be displayed the answer to your requests</h2>
+        </div>
+
+        <footer><img id="image_footer" src="https://cdn.dribbble.com/users/31664/screenshots/2350807/test-robot-2_1.gif" alt="Footer Image"></footer>
+    
+    <script src="Javascript/main.js"></script>
+    <script src="Javascript/chatbot.js"></script>
+    <script src="Javascript/data_treatment.js"></script>
+
+    <script src="Javascript/Data/available_data.js"></script>
+    <script src="Javascript/Data/Fitbit/fitbit_steps_data.js"></script>
+    <script src="Javascript/Data/Fitbit/fitbit_distance_data.js"></script>
+    <script src="Javascript/Data/Vehicle/vehicle_speed_data.js"></script>
+    <script src="Javascript/Data/Indoor/indoor_temperature_data.js"></script>
+    <script src="Javascript/Data/Indoor/indoor_illuminance_data.js"></script>
+    <script src="Javascript/Data/Indoor/indoor_humidity_data.js"></script>
+    <script src="Javascript/Data/Outdoor/outdoor_temperature_data.js"></script>
+    <script src="Javascript/Data/Outdoor/outdoor_wind_speed_data.js"></script>  
+    <script src="Javascript/Data/Weight/weight_data.js"></script>  
+    </body>
+</html>
+
