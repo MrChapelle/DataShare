@@ -319,7 +319,7 @@ function check_basic_string(input)
 
 	if ((input.search('fuck')!=-1)||(input.search('shit')!=-1)||(input.search('bitch')!=-1)||(input.search('sex')!=-1))
 	{
-		document.getElementById('information_container').innerHTML = "Don't talk like that, I don't want to hear these things, how can I help you ?";
+		document.getElementById('information_container').innerHTML = "*** *** ****** ***** ******* ** ***** ********** ************* * :) pd";
 		return result;
 	}
 	
