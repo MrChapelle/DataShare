@@ -428,3 +428,97 @@ function complete_dates(dates, input)
 	}
 	return dates;
 }
+
+function compareTwoIsoDates (date1, date2)
+{
+	// function which test if date1 if before date2
+	// return true if it is the case and false otherwise
+	var response = false;
+
+	if (date1[0]<date2[0])
+	{
+		response = true;
+		return response;	
+	}
+
+	for (var i = 1 ; i < 4 ; i++)
+	{
+		if ((date1[i] < date2[i]) && (date1[0]==date2[0]))
+		{
+			response = true;
+			return response;
+		}
+	}
+
+	if (date1[5] < date2[5])
+	{	
+		response = true;
+		return response;
+	}
+
+
+	if ((date1[5]==date2[5])&&(date1[6]<date2[6]))
+	{
+		response = true;
+		return response;		
+	}
+
+	if (date1[5] > date2[5])
+	{	
+		response = false;
+		return response;
+	}	
+
+	if (date1[8] < date2[8])
+	{
+		response = true;
+		return response;
+	}
+
+	if ((date1[8] == date2[8])&&(date1[9]<date2[9]))
+	{
+		response = true;
+		return response;		
+	}
+
+
+	for (var i = 11 ; i < 13 ; i++)
+	{
+		if (date1[i] < date2[i])
+		{
+			response = true;
+			return response;
+		}
+	}
+
+	for (var i = 14 ; i < 16 ; i++)
+	{
+		if (date1[i] < date2[i])
+		{
+			response = true;
+			return response;
+		}
+	}
+	return response;
+}
+
+function orderQuestionParameters (question_parameters)
+{
+	if (question_parameters.length != 5)
+	{
+		return question_parameters;
+	}
+
+	if (compareTwoIsoDates(question_parameters[3],question_parameters[4]))
+	{
+		return question_parameters;
+	}
+
+	var q3 = question_parameters[3];
+	var q4 = question_parameters[4];
+
+	question_parameters[3] = q4;
+	question_parameters[4] = q3;
+
+	return question_parameters;
+}
