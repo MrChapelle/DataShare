@@ -13,7 +13,6 @@ function main_function()
 	var question_parameters = analyse_string(input);		
 	var size = question_parameters.length;
 
-	console.log(question_parameters);
 
 	if (size!=0)
 	{
@@ -48,13 +47,24 @@ function main_function()
 					avg_weight_data_treatment(question_parameters);
 					// Amine function :
 
+
+
+
 				}
 				if (complement==2)
 				{
 					// What average distance
-					avg_distance_and_steps_data_treatment(question_parameters)
+					avg_distance_and_steps_data_treatment(question_parameters);
 					// Amine function :
-				}
+
+                    avg_steps_data_treatment(question_parameters);
+                    avg_distance_data_treatment(question_parameters);
+                    weight_data_treatment(question_parameters);
+
+
+
+
+                }
 			}			
 		}
 		if (main_case == 1)
