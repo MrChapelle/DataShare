@@ -429,74 +429,72 @@ function complete_dates(dates, input)
 	return dates;
 }
 
-function compareTwoIsoDates (date1, date2)
+function compareTwoIsoDates (d1, d2)
 {
 	// function which test if date1 if before date2
 	// return true if it is the case and false otherwise
-	var response = false;
+	var response = true;
 
-	if (date1[0]<date2[0])
+	if(d1[0]>d2[0])
 	{
-		response = true;
-		return response;	
-	}
-
-	for (var i = 1 ; i < 4 ; i++)
-	{
-		if ((date1[i] < date2[i]) && (date1[0]==date2[0]))
-		{
-			response = true;
-			return response;
-		}
-	}
-
-	if (date1[5] < date2[5])
-	{	
-		response = true;
-		return response;
-	}
-
-
-	if ((date1[5]==date2[5])&&(date1[6]<date2[6]))
-	{
-		response = true;
-		return response;		
-	}
-
-	if (date1[5] > date2[5])
-	{	
 		response = false;
 		return response;
-	}	
-
-	if (date1[8] < date2[8])
-	{
-		response = true;
-		return response;
 	}
 
-	if ((date1[8] == date2[8])&&(date1[9]<date2[9]))
+	if (d1[0]==d2[0])
 	{
-		response = true;
-		return response;		
-	}
-
-
-	for (var i = 11 ; i < 13 ; i++)
-	{
-		if (date1[i] < date2[i])
+		if(d1[1]>d2[1])
 		{
-			response = true;
+			response = false;
 			return response;
 		}
-	}
-
-	for (var i = 14 ; i < 16 ; i++)
-	{
-		if (date1[i] < date2[i])
+		if(d1[1]==d2[1])
 		{
-			response = true;
-			return response;
+			if(d1[2]>d2[2])
+			{
+				response = false;
+				return response;
+			}
+			if(d1[2]==d2[2])
+			{
+				if(d1[3]>d2[3])
+				{
+					response = false;
+					return response;
+				}
+				if(d1[3]==d2[3])
+				{
+					if(d1[5]>d2[5])
+					{
+						response = false;
+						return response;
+					}
+					if(d1[5]==d2[5])
+					{
+						if(d1[6]>d2[6])
+						{
+							response = false;
+							return response;
+						}
+						if(d1[6]==d2[6])
+						{
+							if(d1[8]>d2[8])
+							{
+								response = false;
+								return response;
+							}
+							if(d1[8]==d2[8])
+							{
+								if(d1[9]>d2[9])
+								{
+									response = false;
+									return response;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	return response;
