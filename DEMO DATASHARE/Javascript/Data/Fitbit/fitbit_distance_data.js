@@ -1,56 +1,68 @@
 var sum_distance_last_year = 2986.7312972255866;
 
+var tab_distance_avg = [];
+var tab_distance_dates = [];
 
 var average_distance_each_month =
 [
   {
-    "date": "2018-12-01T00:00:00Z",
+    "date": "2017-12-01T00:00:00Z",
     "avg": 98.60000014305115
   },
-  {    "date": "2018-11-01T00:00:00Z",
+  { 
+    "date": "2017-11-01T00:00:00Z",
     "avg": 136.729
   },
   {
-    "date": "2018-10-01T00:00:00Z",
+    "date": "2017-10-01T00:00:00Z",
     "avg": 159.0999960899353
   },
   {
-    "date": "2018-09-01T00:00:00Z",
+    "date": "2017-09-01T00:00:00Z",
     "avg": 97.80000150203705
   },
   {
-    "date": "2018-08-01T00:00:00Z",
+    "date": "2017-08-01T00:00:00Z",
     "avg": 144.09999549388885
   },
   {
-    "date": "2018-07-01T00:00:00Z",
+    "date": "2017-07-01T00:00:00Z",
     "avg": 85.90000122785568
   },
   {
-    "date": "2018-06-01T00:00:00Z",
+    "date": "2017-06-01T00:00:00Z",
     "avg": 437.3399963378906
   },
   {
-    "date": "2018-05-01T00:00:00Z",
+    "date": "2017-05-01T00:00:00Z",
     "avg": 143.79749999999999
   },
   {
-    "date": "2018-04-01T00:00:00Z",
+    "date": "2017-04-01T00:00:00Z",
     "avg": 192.892
   },
   {
-    "date": "2018-03-01T00:00:00Z",
+    "date": "2017-03-01T00:00:00Z",
     "avg": 192.892
   },
   {
-    "date": "2018-02-01T00:00:00Z",
+    "date": "2017-02-01T00:00:00Z",
     "avg": 296.22998046875
   },
   {
-    "date": "2018-01-01T00:00:00Z",
+    "date": "2017-01-01T00:00:00Z",
     "avg": 290.239990234375
   }
 ];
+
+for (var i = 0 ; i < average_distance_each_month.length ; i++)
+{
+  tab_distance_avg.push(average_distance_each_month[i].avg);
+  tab_distance_dates.push(average_distance_each_month[i].date);
+}
+
+tab_distance_avg = tab_distance_avg.reverse();
+tab_distance_dates = tab_distance_dates.reverse();
 
 var average_distance_each_day =
 [

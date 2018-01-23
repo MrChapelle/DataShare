@@ -104,6 +104,19 @@ var avg_weight_month =
   }
 ];
 
+var tab_weight_avg = [];
+var tab_weight_dates = [];
+
+for (var i = 0 ; i < avg_weight_month.length ; i++)
+{
+  tab_weight_avg.push(avg_weight_month[i].avg);
+  tab_weight_dates.push(avg_weight_month[i].date);
+}
+
+tab_weight_avg = tab_weight_avg.reverse();
+tab_weight_dates = tab_weight_dates.reverse();
+
+
 var max_weight_year_2017 = 
 [
   {

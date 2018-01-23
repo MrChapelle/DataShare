@@ -50,3 +50,14 @@ var avg_steps_month =
   }
 ];
 
+var tab_steps_avg = [];
+var tab_steps_dates = [];
+
+for (var i = 0 ; i < avg_steps_month.length ; i++)
+{
+  tab_steps_avg.push(avg_steps_month[i].avg);
+  tab_steps_dates.push(avg_steps_month[i].date);
+}
+
+tab_steps_avg = tab_steps_avg.reverse();
+tab_steps_dates = tab_steps_dates.reverse();
