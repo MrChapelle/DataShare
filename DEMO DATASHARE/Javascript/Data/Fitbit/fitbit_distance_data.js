@@ -2783,4 +2783,3 @@ var average_distance_each_day =
     "avg": 35.04292214805914
   }
 ];
-];
