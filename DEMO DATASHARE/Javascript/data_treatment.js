@@ -1,4 +1,4 @@
-// each question (input) can be send with 0 , 1 or 2 dates , manually or using words like : 'last year' -> two dates ; 'yesterday'-> one date ...
+// Each Question (input) can be send with 0 , 1 or 2 dates , manually or using words like : 'last year' -> two dates ; 'yesterday'-> one date ...
 
 //000
 // function called with : What maximum weight
@@ -33,6 +33,7 @@ function max_weight_data_treatment(question_parameters)
 		{
 			question_parameters = orderQuestionParameters (question_parameters);
 			document.getElementById('information_container').innerHTML += "You asked for your weight between the dates : <br><b>" + question_parameters[3] + "</b> and <b>" + question_parameters[4] + "</b><br>";
+
 			for ( var i = 0 ; i < avg_weight_month.length ; i++)
 			{
 				if (compareTwoIsoDates (question_parameters[3], avg_weight_month[i].date))
@@ -75,6 +76,21 @@ function max_speed_data_treatment(question_parameters)
 			}
 		}
 	}
+	if (question_parameters.length == 5)
+		{
+			question_parameters = orderQuestionParameters (question_parameters);
+			document.getElementById('information_container').innerHTML += "You asked for your speed between the dates : <br><b>" + question_parameters[3] + "</b> and <b>" + question_parameters[4] + "</b><br>";
+			for ( var i = 0 ; i < max_speed_vehicle_day.length ; i++)
+			{
+				if (compareTwoIsoDates (question_parameters[3], max_speed_vehicle_day[i].date))
+				{
+					if (compareTwoIsoDates (max_speed_vehicle_day[i].date,question_parameters[4]))
+					{
+						document.getElementById('information_container').innerHTML += "Date : <b>" + max_speed_vehicle_day[i].date + "</b> Max Speed : <b>" + max_speed_vehicle_day[i].max + "</b><br>";
+					}
+				}
+			}
+		}
 }
 
 //010
@@ -112,7 +128,7 @@ function avg_weight_data_treatment(question_parameters)
 // function called with What average distance
 function avg_distance_and_steps_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The distance you walked last year is : <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
+	document.getElementById('information_container').innerHTML = "The distance you've moved last year is : <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
 	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was : <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
 
 	var avg_distance_each_month = 0;
@@ -121,8 +137,8 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 	{
 		avg_distance_each_month += average_distance_each_month[i].avg;
 	}
-	average_distance_each_month /= 12;
-	document.getElementById('information_container').innerHTML += "Each month you walked an average distance of : <br><b> " + avg_distance_each_month.toFixed(3) + " km<br></b>";
+	avg_distance_each_month /= 12;
+	document.getElementById('information_container').innerHTML += "Each month you've moved an average distance of : <br><b> " + avg_distance_each_month.toFixed(3) + " km<br></b>";
 
 	var avg_steps_each_month = 0;
 
