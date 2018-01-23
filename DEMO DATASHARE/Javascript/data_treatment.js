@@ -84,7 +84,7 @@ function max_speed_data_treatment(question_parameters)
 			{
 				if (compareTwoIsoDates (max_speed_vehicle_day[i].date,question_parameters[4]))
 				{
-					document.getElementById('information_container').innerHTML += "Date : <b>" + max_speed_vehicle_day[i].date + "</b> Max Speed : <b>" + max_speed_vehicle_day[i].max.toFixed(2) + "</b><br>";
+					document.getElementById('information_container').innerHTML += "Date : <b>" + max_speed_vehicle_day[i].date + "</b> Max Speed : <b>" + max_speed_vehicle_day[i].max.toFixed(2) + " km/h</b><br>";
 				}
 			}
 		}
