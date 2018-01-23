@@ -4,6 +4,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="CSS/icon.css">
+        <link rel="stylesheet" href="CSS/style.css">
+
+
+
     </head>
     <body>
     <a href="https://developer.orange.com/apis/datashare/" target="_blank">
@@ -30,22 +35,96 @@
                 </p>
 
 
-                <button type="button " class="btn btn-vio  btn-lg btn-block col-md-4" style="    margin-left: auto;
+                <button type="button " class="btn btn-outline-vio  btn-lg btn-block col-md-4" style=" margin-left: auto;
                  margin-right: auto" onclick="main_function()">Send Question</button>
             </div>
 
             <div class="card-footer text-muted">
-                <div id="information_container"><h6 >Here will be displayed the answer to your requests</h6>
-                </div>
+                <div id="information_container"><h6 >Here will be displayed the answer to your requests</h6></div>
             </div>        </div>
         <div id="menu1" class="tab-pane fade">
-            <h3>Menu 1</h3>
+
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card" >
+                            <div class="card-header" style="background-color:white;border-bottom:0">
+                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                    <i class="foot"></i>
+                                </div>
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        step : 1800
+                                    </h5>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-4">
+                            <div class="card" >
+                                <div class="card-header" style="background-color:white;border-bottom:0">
+                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                        <i class="urgency"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        distance : 1800
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card" >
+                                <div class="card-header" style="background-color:white;border-bottom:0">
+                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                        <i class="thermometer"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        temperature : 1800
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="myChart" ></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
 
        </div>
         </div>
     </div>
 
-    <canvas id="myChart" width="40" height="40"></canvas>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
@@ -67,7 +146,8 @@
     <script src="Javascript/Data/Weight/weight_data.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     </body>
 </html>
 
