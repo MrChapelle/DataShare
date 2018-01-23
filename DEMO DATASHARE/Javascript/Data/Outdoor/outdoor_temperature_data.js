@@ -1,4 +1,6 @@
-var max_outdoor_temperature_day_2018 = 
+var current_outdoor_temperature = 6.36546;
+
+var max_outdoor_temperature_day_2017 = 
 [
   {
     "date": "2017-10-22T00:00:00Z",
@@ -90,7 +92,7 @@ var max_outdoor_temperature_day_2018 =
   }
 ];
 
-var avg_outdoor_temperature_day_2018 =
+var avg_outdoor_temperature_day_2017 =
 [
   {
     "date": "2017-10-22T00:00:00Z",

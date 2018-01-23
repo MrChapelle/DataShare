@@ -27,22 +27,33 @@ function main_function()
 			{
 				if (complement==0)
 				{
-					max_weight_data_treatment(question_parameters);
+					// What maximum weight
+					max_weight_data_treatment(question_parameters);	
+					// Amine function :
+
 				}
 				if (complement==1)
 				{
+					// What maximum speed
 					max_speed_data_treatment(question_parameters);
+					// Amine function :
+
 				}
 			}
 			if (minor_case == 1)
 			{
 				if (complement==0)
 				{
+					// What average weight
 					avg_weight_data_treatment(question_parameters);
+					// Amine function :
+
 				}
 				if (complement==2)
 				{
+					// What average distance
 					avg_distance_and_steps_data_treatment(question_parameters)
+					// Amine function :
 				}
 			}			
 		}

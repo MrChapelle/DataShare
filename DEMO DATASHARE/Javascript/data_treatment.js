@@ -1,4 +1,7 @@
+// each question (input) can be send with 0 , 1 or 2 dates , manually or using words like : 'last year' -> two dates ; 'yesterday'-> one date ...
+
 //000
+// function called with : What maximum weight
 function max_weight_data_treatment(question_parameters)
 {
 	var max_weight_last_year = 0;
@@ -25,10 +28,27 @@ function max_weight_data_treatment(question_parameters)
 				}
 			}
 		}
+
+		if (question_parameters.length == 5)
+		{
+			question_parameters = orderQuestionParameters (question_parameters);
+			document.getElementById('information_container').innerHTML += "You asked for your weight between the dates : <br><b>" + question_parameters[3] + "</b> and <b>" + question_parameters[4] + "</b><br>";
+			for ( var i = 0 ; i < avg_weight_month.length ; i++)
+			{
+				if (compareTwoIsoDates (question_parameters[3], avg_weight_month[i].date))
+				{
+					if (compareTwoIsoDates (avg_weight_month[i].date,question_parameters[4]))
+					{
+						document.getElementById('information_container').innerHTML += "Date : <b>" + avg_weight_month[i].date + "</b> Average Weight : <b>" + avg_weight_month[i].avg + "</b><br>";
+					}
+				}
+			}
+		}
 	}
 }
 
 //001
+// function called with What maximum speed
 function max_speed_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "Your maximum speed last year was <b><br>" + max_speed_vehicle_year + " km/h<br></b>";
@@ -58,6 +78,7 @@ function max_speed_data_treatment(question_parameters)
 }
 
 //010
+// function called with What average weight
 function avg_weight_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "Your last registered weight is : <br><b>" + current_weight + " kg<br></b>";
@@ -88,6 +109,7 @@ function avg_weight_data_treatment(question_parameters)
 }
 
 //012
+// function called with What average distance
 function avg_distance_and_steps_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "The distance you walked last year is : <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
@@ -129,6 +151,7 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 }
 
 //100
+// function called with Could weather indoor
 function weather_indoor_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "The last registered illuminance is : <br><b>" + current_illuminance.toFixed(3) + "<br></b>";
@@ -173,6 +196,7 @@ function weather_indoor_data_treatment(question_parameters)
 }
 
 //101
+// function called with Could weather outdoor
 function weather_outdoor_data_treatment(question_parameters)
 {
 	document.getElementById('information_container').innerHTML = "The last registered outdoor humidity is : <br><b>" + current_outdoor_humidity.toFixed(3) + "<br></b>";
@@ -208,13 +232,35 @@ function weather_outdoor_data_treatment(question_parameters)
 }
 
 //110
+// function called with Could temperature indoor
 function temperature_indoor_data_treatment(question_parameters)
 {
-	console.log("function case :110");
+	document.getElementById('information_container').innerHTML = "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018 + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2017 is : <br><b>" + max_indoor_temperature_year_2017 + " °C<br></b>";
+
+	var avg_temp_indoor = 0;
+
+	for ( var i = 0 ; i < avg_indoor_temperature_day.length; i++)
+	{
+		avg_temp_indoor += avg_indoor_temperature_day[i].avg;
+	}
+	avg_temp_indoor /= avg_indoor_temperature_day.length
+
+	document.getElementById('information_container').innerHTML += "The average indoor temperature registered in 2018 is : <br><b>" + avg_temp_indoor.toFixed(3) + " °C<br></b>";
 }
 
 //111
+// function called with Could temperature outdoor
 function temperature_outdoor_data_treatment(question_parameters)
 {
-	console.log("function case :111");
+	document.getElementById('information_container').innerHTML = "The last registered outdoor temperature is : <br><b>" + current_outdoor_temperature.toFixed(3) + " °C<br></b>";
+	var avg_temp_outdoor = 0;
+
+	for ( var i = 0 ; i < avg_outdoor_temperature_month.length; i++)
+	{
+		avg_temp_outdoor += avg_outdoor_temperature_month[i].avg;
+	}
+	avg_temp_outdoor /= avg_outdoor_temperature_month.length
+
+	document.getElementById('information_container').innerHTML += "The average outdoor temperature registered in 2017 is : <br><b>" + avg_temp_outdoor.toFixed(3) + " °C<br></b>";
 }
