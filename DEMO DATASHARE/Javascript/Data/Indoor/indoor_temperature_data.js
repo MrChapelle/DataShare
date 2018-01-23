@@ -1,18 +1,6 @@
-var max_indoor_temperature_year_2018 =
-[
-  {
-    "date": "2018-01-01T00:00:00Z",
-    "max": 25.7
-  }
-];
+var max_indoor_temperature_year_2018 = 25.7;
 
-var max_indoor_temperature_year_2017 =
-[
-  {
-    "date": "2017-01-01T00:00:00Z",
-    "max": 29.7
-  }
-];
+var max_indoor_temperature_year_2017 = 29.7;
 
 var max_indoor_temperature_month = 
 [
