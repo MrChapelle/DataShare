@@ -84,7 +84,7 @@ function max_speed_data_treatment(question_parameters)
 			{
 				if (compareTwoIsoDates (max_speed_vehicle_day[i].date,question_parameters[4]))
 				{
-					document.getElementById('information_container').innerHTML += "Date : <b>" + max_speed_vehicle_day[i].date + "</b> Max Speed : <b>" + max_speed_vehicle_day[i].max.toFixed(2) + "</b><br>";
+					document.getElementById('information_container').innerHTML += "Date : <b>" + max_speed_vehicle_day[i].date + "</b> Max Speed : <b>" + max_speed_vehicle_day[i].max.toFixed(2) + " km/h</b><br>";
 				}
 			}
 		}
@@ -297,8 +297,8 @@ function weather_outdoor_data_treatment(question_parameters)
 // function called with Could temperature indoor
 function temperature_indoor_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018.max + " °C<br></b>";
-	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2017 is : <br><b>" + max_indoor_temperature_year_2017.max + " °C<br></b>";
+	document.getElementById('information_container').innerHTML = "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018 + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2017 is : <br><b>" + max_indoor_temperature_year_2017 + " °C<br></b>";
 
 	var avg_temp_indoor = 0;
 
