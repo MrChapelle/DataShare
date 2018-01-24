@@ -14,7 +14,12 @@
 
 .test{
 
+<<<<<<< HEAD
     overflow-x:scroll;
+=======
+    overflow-y:auto;
+    overflow-x:auto;
+>>>>>>> 8ba83aca0ddfabd3871dde5d55c701d13cc9cca4
 
 }
 
