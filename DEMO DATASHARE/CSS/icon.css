@@ -24,6 +24,15 @@
 
 
 }
+
+.humidity{
+
+    content:url(humidity.svg)!important;
+    padding: 15px 0;
+    width: 40px;
+
+
+}
 .weight{
 
     content:url(weight.svg)!important;
@@ -38,5 +47,5 @@
     border-radius:50%;
     width:80px;
     height:80px;
-    border:1px solid #8c8c8c;
+    border:1px solid #a785d8;
 }

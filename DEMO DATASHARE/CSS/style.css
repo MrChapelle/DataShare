@@ -11,3 +11,18 @@
     background-image: none;
     border-color: #a785d8;
 }
+
+.test{
+
+    overflow-x:scroll
+
+}
+
+
+card-cliquable:hover{
+
+
+    background-color: #a785d8;
+
+
+}

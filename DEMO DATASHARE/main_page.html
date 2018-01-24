@@ -15,7 +15,7 @@
     <img src="Images/Datashare_Slogan.png" class="img-fluid" alt="Responsive image">
     </a><br>
 
-    <div class="card text-center">
+    <div class="card text-center " style="border: 0px ">
         <div class="card-header">
     <ul class="nav nav-pills">
         <li class="nav-item" class="active"><a class="nav-link active" data-toggle="tab" href="#home">Question</a></li>
@@ -23,9 +23,50 @@
 
     </ul>
     </div>
+
+        <br>
         <div class="tab-content">
         <div id="home" class="tab-pane fade in active show">
-            <div class="card-body">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card" style="height: 50%" >
+
+                            <div class="card-body">
+                                <h5 class="card-title">Ask to "Amine" Chatbot the information you desire</h5>
+                                <br>
+                                <p class="card-text">
+                                    <input id="question_content" class="form-control col-md-6"style="    margin-left: auto;
+                          margin-right: auto; border:1px solid #a785d8" type="text" placeholder="desired information" name="information" required>
+                                    <br>
+                                </p>
+
+
+                                <button type="button " class="btn btn-outline-vio  btn-lg btn-block col-md-6" style=" margin-left: auto;
+                                       margin-right: auto" onclick="main_function()">Send Question</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card" style="height: 50%" >
+                            <p class="card-text">
+                            <div id="information_container"  class="test"><h6 >Here will be displayed the answer to your requests</h6></div>
+
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+           <!-- <div class="card-body">
                 <h5 class="card-title">Ask to "Amine" Chatbot the information you desire</h5>
                 <br>
                 <p class="card-text">
@@ -41,7 +82,57 @@
 
             <div class="card-footer text-muted">
                 <div id="information_container"><h6 >Here will be displayed the answer to your requests</h6></div>
-            </div>        </div>
+            </div> -->
+
+
+        </div>
+
+
+            <div id="menu1" class="tab-pane fade">
+
+                <div class="container ">
+
+                    <div class="row ">
+                        <div class="col-6">
+                            <div class="card card-cliquable" >
+                                <div class="card-header" style="background-color:white;border-bottom:0">
+                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                        <i class="thermometer"></i>
+                                    </div>
+                                </div>
+                                Temperature :
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        <div id="temperature_container"> </div>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="card" >
+                                <div class="card-header" style="background-color:white;border-bottom:0">
+                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                        <i class="humidity"></i>
+                                    </div>
+                                </div>
+                                Humidity :
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        <div id="humidity_container"> </div>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--
         <div id="menu1" class="tab-pane fade">
 
             <br>
@@ -97,24 +188,65 @@
                 </div>
             </div>
             <br>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card" >
+                            <div class="card-header" style="background-color:white;border-bottom:0">
+                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                    <i class="thermometer"></i>
+                                </div>
+                            </div>
+                            Temperature :
+                            <div class="card-body">
+                                <h5 class="card-text">
+                                    <div id="temperature_container"> </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card" >
+                            <div class="card-header" style="background-color:white;border-bottom:0">
+                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                    <i class="humidity"></i>
+                                </div>
+                            </div>
+                            Humidity :
+                            <div class="card-body">
+                                <h5 class="card-text">
+                                    <div id="humidity_container"> </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <br>
 
             <div class="container">
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-body">
-                                <canvas id="myChart" ></canvas>
+                                <canvas id="myChart"></canvas>
+
+
                             </div>
                         </div>
-
                     </div>
 
-                    <div class="col-4">
-
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <canvas id="myChart2"></canvas>
                             </div>
                         </div>
                     </div>
@@ -125,12 +257,33 @@
 
             </div>
 
+            <br>
+
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="myChart3"></canvas>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+
        </div>
         </div>
+
+            -->
     </div>
 
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="Javascript/Chart.js"></script>
 

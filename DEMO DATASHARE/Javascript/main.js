@@ -14,7 +14,11 @@ function main_function()
 	var size = question_parameters.length;
 
 
-	if (size!=0)
+
+
+
+
+    if (size!=0)
 	{
 		var main_case = question_parameters[0];
 		var minor_case = question_parameters[1];
@@ -29,6 +33,7 @@ function main_function()
 					// What maximum weight
 					max_weight_data_treatment(question_parameters);	
 					// Amine function :
+
 
 				}
 				if (complement==1)
@@ -57,11 +62,13 @@ function main_function()
 					avg_distance_and_steps_data_treatment(question_parameters);
 					// Amine function :
 
-                    avg_steps_data_treatment(question_parameters);
-                    avg_distance_data_treatment(question_parameters);
-                    weight_data_treatment(question_parameters);
 
+                    avg_steps_data_treatment();
+                    avg_distance_data_treatment();
+                    weight_data_treatment();
 
+                    temperature_data_treatment();
+                    weather_data_treatment();
 
 
                 }
