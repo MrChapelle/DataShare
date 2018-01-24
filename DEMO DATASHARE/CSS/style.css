@@ -14,12 +14,12 @@
 
 .test{
 
-    overflow-x:scroll
+    overflow-x:scroll;
 
 }
 
 
-card-cliquable:hover{
+.card-cliquable:hover{
 
 
     background-color: #a785d8;
