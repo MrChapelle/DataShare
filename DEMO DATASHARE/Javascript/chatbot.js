@@ -319,12 +319,17 @@ function check_basic_string(input)
 
 	if ((input.search('fuck')!=-1)||(input.search('shit')!=-1)||(input.search('bitch')!=-1)||(input.search('sex')!=-1))
 	{
-		document.getElementById('information_container').innerHTML = "*** *** ****** ***** ******* ** ***** ********** ************* * :) pd";
+		document.getElementById('information_container').innerHTML = "*** *** ****** ***** ******* ** ***** ********** ************* * you're welcome ! ";
 		return result;
 	}
-	if (input.search('raining')!=-1)
+	if ((input.search('raining')!=-1)||(input.search('go out')!=-1))
 	{
 		document.getElementById('information_container').innerHTML = "I don't think it's raining, you can go outside";
+		return result;
+	}
+	if ((input.search('Bye')!=-1)||(input.search('bye')!=-1)||(input.search('see you later')!=-1)||(input.search('See you later')!=-1))
+	{
+		document.getElementById('information_container').innerHTML = "Goodbye, see you later !";
 		return result;
 	}
 	

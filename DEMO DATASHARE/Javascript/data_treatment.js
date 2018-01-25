@@ -40,7 +40,7 @@ function max_weight_data_treatment(question_parameters)
 				{
 					if (compareTwoIsoDates (avg_weight_month[i].date,question_parameters[4]))
 					{
-						document.getElementById('information_container').innerHTML += "Date : <b>" + avg_weight_month[i].date + "</b> Average Weight : <b>" + avg_weight_month[i].avg + "</b><br>";
+						document.getElementById('information_container').innerHTML += "Date : <b>" + avg_weight_month[i].date + "</b> Maximum Weight : <b>" + avg_weight_month[i].avg + "</b><br>";
 					}
 				}
 			}
@@ -138,7 +138,8 @@ function avg_weight_data_treatment(question_parameters)
 // function called with What average distance
 function avg_distance_and_steps_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The distance you've moved last year is : <br><b>" + sum_distance_last_year.toFixed(3) + " km<br></b>";
+	document.getElementById('information_container').innerHTML = "The distance you've moved today is : <br><b>" + distance_today.toFixed(1) + " km<br></b>";
+	document.getElementById('information_container').innerHTML += "The distance you've moved last year is : <br><b>" + sum_distance_last_year.toFixed(1) + " km<br></b>";
 	document.getElementById('information_container').innerHTML += "Which means the average distance you walked each day was : <br><b>" + (sum_distance_last_year/365).toFixed(3) + " km<br></b>";
 
 	var avg_distance_each_month = 0;
@@ -148,7 +149,7 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 		avg_distance_each_month += average_distance_each_month[i].avg;
 	}
 	avg_distance_each_month /= 12;
-	document.getElementById('information_container').innerHTML += "Each month you've moved an average distance of : <br><b> " + avg_distance_each_month.toFixed(3) + " km<br></b>";
+	document.getElementById('information_container').innerHTML += "Each month you've moved an average distance of : <br><b> " + avg_distance_each_month.toFixed(1) + " km<br></b>";
 
 	var avg_steps_each_month = 0;
 
@@ -157,7 +158,7 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 		avg_steps_each_month += avg_steps_month[i].avg;
 	}
 	avg_steps_each_month /= 12;
-	document.getElementById('information_container').innerHTML += "Each month you walked an average number of steps of : <br><b> " + avg_steps_each_month.toFixed(3) + " steps<br></b>";
+	document.getElementById('information_container').innerHTML += "Each month you walked an average number of steps of : <br><b> " + avg_steps_each_month.toFixed(1) + " steps<br></b>";
 
 	if (question_parameters.length == 4)
 	{
@@ -166,7 +167,7 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 			if (average_distance_each_day[i].date == question_parameters[3])
 			{
 				document.getElementById('information_container').innerHTML += "You also asked the distance you walked at the date : <br><b> " + average_distance_each_day[i].date + 
-				"</b><br> which is : <br><b> " + (average_distance_each_day[i].avg).toFixed(3) + " km</b><br>";
+				"</b><br> which is : <br><b> " + (average_distance_each_day[i].avg).toFixed(1) + " km</b><br>";
 				break;
 			}
 		}
@@ -181,7 +182,7 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 			{
 				if (compareTwoIsoDates (average_distance_each_day[i].date,question_parameters[4]))
 				{
-					document.getElementById('information_container').innerHTML += "Date : <b>" + average_distance_each_day[i].date + "</b> Average Distance : <b>" + average_distance_each_day[i].avg.toFixed(2) + " km</b><br>";
+					document.getElementById('information_container').innerHTML += "Date : <b>" + average_distance_each_day[i].date + "</b> Average Distance : <b>" + average_distance_each_day[i].avg.toFixed(1) + " km</b><br>";
 				}
 			}
 		}
@@ -297,7 +298,8 @@ function weather_outdoor_data_treatment(question_parameters)
 // function called with Could temperature indoor
 function temperature_indoor_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018 + " °C<br></b>";
+	document.getElementById('information_container').innerHTML = "The last registered indoor temperature is : <br><b>" + current_indoor_temperature + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2018 is : <br><b>" + max_indoor_temperature_year_2018 + " °C<br></b>";
 	document.getElementById('information_container').innerHTML += "The max indoor temperature registered in 2017 is : <br><b>" + max_indoor_temperature_year_2017 + " °C<br></b>";
 
 	var avg_temp_indoor = 0;
@@ -308,7 +310,7 @@ function temperature_indoor_data_treatment(question_parameters)
 	}
 	avg_temp_indoor /= avg_indoor_temperature_day.length
 
-	document.getElementById('information_container').innerHTML += "The average indoor temperature registered in 2018 is : <br><b>" + avg_temp_indoor.toFixed(3) + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The average indoor temperature registered in 2018 is : <br><b>" + avg_temp_indoor.toFixed(2) + " °C<br></b>";
 
 	if (question_parameters.length == 4)
 	{

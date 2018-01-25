@@ -1,3 +1,5 @@
+var current_indoor_temperature = 21.6;
+
 var max_indoor_temperature_year_2018 = 25.7;
 
 var max_indoor_temperature_year_2017 = 29.7;
