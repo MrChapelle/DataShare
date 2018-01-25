@@ -52,8 +52,7 @@ function max_weight_data_treatment(question_parameters)
 // function called with What maximum speed
 function max_speed_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "Your maximum speed last year was <b><br>" + max_speed_vehicle_year + " km/h<br></b>";
-
+	document.getElementById('information_container').innerHTML = "";
 	if (question_parameters.length == 4)
 	{
 		for (var i = 0 ; i < max_speed_vehicle_day.length ; i++)
@@ -89,6 +88,7 @@ function max_speed_data_treatment(question_parameters)
 			}
 		}
 	}
+	document.getElementById('information_container').innerHTML += "If I can add a commentary : <br>Your maximum speed last year was <b><br>" + max_speed_vehicle_year + " km/h<br></b>";
 }
 
 //010
@@ -193,8 +193,8 @@ function avg_distance_and_steps_data_treatment(question_parameters)
 // function called with Could weather indoor
 function weather_indoor_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The last registered illuminance is : <br><b>" + current_illuminance.toFixed(3) + "<br></b>";
-	document.getElementById('information_container').innerHTML += "The last registered humidity is : <br><b>" + current_humidity.toFixed(3) + "<br></b>";
+	document.getElementById('information_container').innerHTML = "The last registered illuminance is : <br><b>" + current_illuminance.toFixed(1) + "<br></b>";
+	document.getElementById('information_container').innerHTML += "The last registered humidity is : <br><b>" + current_humidity.toFixed(1) + "<br></b>";
 	document.getElementById('information_container').innerHTML += "The maximum registered indoor humidity last year was : <br><b>" + max_indoor_humidity_year_2017 + "<br></b>";
 
 	var avg_indoor_humidity = 0;
@@ -213,8 +213,8 @@ function weather_indoor_data_treatment(question_parameters)
 	avg_indoor_luminosity /=  avg_indoor_illuminance_day_2018.length;
 
 
-	document.getElementById('information_container').innerHTML += "The average indoor humidity is : <br><b> " + avg_indoor_humidity.toFixed(3) + " <br></b>";
-	document.getElementById('information_container').innerHTML += "The average indoor luminosity is : <br><b> " + avg_indoor_luminosity.toFixed(3) + " <br></b>";
+	document.getElementById('information_container').innerHTML += "The average indoor humidity is : <br><b> " + avg_indoor_humidity.toFixed(1) + " <br></b>";
+	document.getElementById('information_container').innerHTML += "The average indoor luminosity is : <br><b> " + avg_indoor_luminosity.toFixed(1) + " <br></b>";
 
 	if (question_parameters.length == 4)
 	{
@@ -250,7 +250,7 @@ function weather_indoor_data_treatment(question_parameters)
 // function called with Could weather outdoor
 function weather_outdoor_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The last registered outdoor humidity is : <br><b>" + current_outdoor_humidity.toFixed(3) + "<br></b>";
+	document.getElementById('information_container').innerHTML = "The last registered outdoor humidity is : <br><b>" + current_outdoor_humidity.toFixed(1) + "<br></b>";
 
 	avg_humidity_last_year = 0 ;
 
@@ -260,7 +260,7 @@ function weather_outdoor_data_treatment(question_parameters)
 	}
 	avg_humidity_last_year /= avg_outdoor_humidity_day.length;
 
-	document.getElementById('information_container').innerHTML = "Last year the average outdoor humidity was : <br><b>" + avg_humidity_last_year.toFixed(3) + "<br></b>";
+	document.getElementById('information_container').innerHTML = "Last year the average outdoor humidity was : <br><b>" + avg_humidity_last_year.toFixed(1) + "<br></b>";
 
 	var asked_humidity = 0;
 
@@ -346,7 +346,7 @@ function temperature_indoor_data_treatment(question_parameters)
 // function called with Could temperature outdoor
 function temperature_outdoor_data_treatment(question_parameters)
 {
-	document.getElementById('information_container').innerHTML = "The last registered outdoor temperature is : <br><b>" + current_outdoor_temperature.toFixed(3) + " °C<br></b>";
+	document.getElementById('information_container').innerHTML = "The last registered outdoor temperature is : <br><b>" + current_outdoor_temperature.toFixed(1) + " °C<br></b>";
 	var avg_temp_outdoor = 0;
 
 	for ( var i = 0 ; i < avg_outdoor_temperature_month.length; i++)
@@ -355,11 +355,11 @@ function temperature_outdoor_data_treatment(question_parameters)
 	}
 	avg_temp_outdoor /= avg_outdoor_temperature_month.length
 
-	document.getElementById('information_container').innerHTML += "The average outdoor temperature registered in 2017 is : <br><b>" + avg_temp_outdoor.toFixed(3) + " °C<br></b>";
+	document.getElementById('information_container').innerHTML += "The average outdoor temperature registered in 2017 is : <br><b>" + avg_temp_outdoor.toFixed(1) + " °C<br></b>";
 
 	if (question_parameters.length == 4)
 	{
-		document.getElementById('information_container').innerHTML += "Data missing at the date : <b> " + question_parameters[3] + "</b><br>";
+		//document.getElementById('information_container').innerHTML += "Data missing at the date : <b> " + question_parameters[3] + "</b><br>";
 	}
 	if (question_parameters.length == 5)
 	{

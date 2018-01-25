@@ -295,19 +295,19 @@ function check_basic_string(input)
 
 	if (input.search('Hello')!=-1||input.search('hello')!=-1)
 	{
-		document.getElementById('information_container').innerHTML = "Hello, what is your name ?";
+		document.getElementById('information_container').innerHTML = "Hello, Nice to meet you ! :) ";
 		return result;
 	}
 
 	if ((input.search('my name is')!= -1)||(input.search('My name is')!= -1))
 	{
-		document.getElementById('information_container').innerHTML = "I am Amine, nice to meet you, how can I help you ?";
+		document.getElementById('information_container').innerHTML = "I am Amine, nice to meet you too !";
 		return result;
 	}
 
 	if ((input.search('are you')!=-1)||(input.search('Are you')!=-1))
 	{
-		document.getElementById('information_container').innerHTML = "I don't know what I am but one thing is pretty sure, I am not a robot, how can I help you now ?";
+		document.getElementById('information_container').innerHTML = "I don't know what I am but one thing is pretty sure, I AM NOT a robot :) , how can I help you now ?";
 		return result;
 	}
 
@@ -332,7 +332,16 @@ function check_basic_string(input)
 		document.getElementById('information_container').innerHTML = "Goodbye, see you later !";
 		return result;
 	}
-	
+	if (input.search('Thank you')!=-1||input.search('thank you')!=-1)
+	{
+		document.getElementById('information_container').innerHTML = "Hello, Nice to meet you ! :) ";
+		return result;
+	}
+	if (input.search('tired')!=-1||input.search('sleep')!=-1)
+	{
+		document.getElementById('information_container').innerHTML = "Good Night my friend ! I'm going to sleep too ! We wezd ... zzzzzzzzzz ....";
+		return result;
+	}
 	result = true;
 	return result;	
 }
