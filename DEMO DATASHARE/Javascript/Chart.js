@@ -194,6 +194,98 @@ tab_weight_avg = tab_weight_avg.reverse();
 tab_weight_dates = tab_weight_dates.reverse();
 
 
+var max_speed_vehicle_month =
+    [
+        {
+            "date": "2018-01-01",
+            "max": 135.98999
+        },
+        {
+            "date": "2017-12-01",
+            "max": 121.29
+        },
+        {
+            "date": "2017-11-01",
+            "max": 132.03
+        },
+        {
+            "date": "2017-10-01",
+            "max": 145.65
+        },
+        {
+            "date": "2017-09-01",
+            "max": 112.25
+        },
+        {
+            "date": "2017-08-01",
+            "max": 143.91
+        },
+        {
+            "date": "2017-07-01",
+            "max": 132.28
+        },
+        {
+            "date": "2017-06-01",
+            "max": 130.83
+        },
+        {
+            "date": "2017-05-01",
+            "max": 116.42
+        },
+        {
+            "date": "2017-04-01",
+            "max": 129.45
+        },
+        {
+            "date": "2017-03-01",
+            "max": 114.509995
+        }
+    ];
+
+
+var tab_speed_max = [];
+var tab_speed_dates = [];
+
+for (var i = 0 ; i < max_speed_vehicle_month.length ; i++)
+{
+    tab_speed_max.push(max_speed_vehicle_month[i].max);
+    tab_speed_dates.push(max_speed_vehicle_month[i].date);
+}
+
+tab_speed_max = tab_speed_max.reverse();
+tab_speed_dates = tab_speed_dates.reverse();
+
+
+var ctx = document.getElementById("myChart4").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: tab_speed_dates,
+        datasets: [{
+            label: 'speed',
+            data: tab_speed_max,
+            borderColor: "#a785d8",
+            backgroundColor:"transparent",
+
+        }
+
+
+
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
 
 
 var ctx = document.getElementById("myChart").getContext('2d');

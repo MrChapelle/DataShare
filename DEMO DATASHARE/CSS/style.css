@@ -20,10 +20,39 @@
 }
 
 
+
+.moncercle{
+    border-radius:50%;
+    width:80px;
+    height:80px;
+    border:1px solid #a785d8;
+    background-color: white;
+}
+
+
+.moncercle2{
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    border:2px solid #a785d8;
+    background-color: white;
+}
+
+.moncercle2:hover{
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    border:2px solid #a785d8;
+    background-color: #d299f8ad;
+}
+
+
+
 .card-cliquable:hover{
 
-
     background-color: #a785d8;
-
+    color: white;
 
 }
+
+

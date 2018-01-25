@@ -48,6 +48,19 @@ var max_speed_vehicle_month =
   }
 ];
 
+
+var tab_speed_max = [];
+var tab_speed_dates = [];
+
+for (var i = 0 ; i < max_speed_vehicle_month.length ; i++)
+{
+    tab_speed_max.push(max_speed_vehicle_month[i].max);
+    tab_speed_dates.push(max_speed_vehicle_month[i].date);
+}
+
+tab_speed_max = tab_speed_max.reverse();
+tab_speed_dates = tab_speed_dates.reverse();
+
 var max_speed_vehicle_day =
 [
   {

@@ -42,11 +42,49 @@
 
 }
 
+.car{
 
-.moncercle{
-    border-radius:50%;
-    width:80px;
-    height:80px;
-    border:1px solid #a785d8;
+    content:url(sports-car.svg)!important;
+    padding: 15px 0;
+    width: 40px;
+
+
 }
+
+.stretching{
+
+    content:url(stretching-exercises.svg)!important;
+    padding: 15px 0;
+    width: 40px;
+
+
+}
+
+
+.speed{
+
+    content:url(speed.svg)!important;
+    padding: 15px 0;
+    width: 40px;
+
+
+}
+
+.left-arrow{
+
+    content:url(left-arrow.svg)!important;
+    padding: 8px 0;
+    width: 30px;
+
+
+}
+
+.restart:hover{
+
+
+    background-color: white;
+
+}
+
+
 

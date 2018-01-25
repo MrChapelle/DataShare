@@ -66,23 +66,6 @@
 
             </div>
 
-           <!-- <div class="card-body">
-                <h5 class="card-title">Ask to "Amine" Chatbot the information you desire</h5>
-                <br>
-                <p class="card-text">
-                    <input id="question_content" class="form-control col-md-4"style="    margin-left: auto;
-                          margin-right: auto; border:1px solid #a785d8" type="text" placeholder="desired information" name="information" required>
-                    <br>
-                </p>
-
-
-                <button type="button " class="btn btn-outline-vio  btn-lg btn-block col-md-4" style=" margin-left: auto;
-                 margin-right: auto" onclick="main_function()">Send Question</button>
-            </div>
-
-            <div class="card-footer text-muted">
-                <div id="information_container"><h6 >Here will be displayed the answer to your requests</h6></div>
-            </div> -->
 
 
         </div>
@@ -90,36 +73,38 @@
 
             <div id="menu1" class="tab-pane fade">
 
-                <div class="container ">
+                <div class="container" id="card-home">
 
                     <div class="row ">
-                        <div class="col-6 ">
-                            <div class="card  " >
-                                <div class="card-header " style="background-color:white;border-bottom:0">
+                        <div class="col-6">
+                            <div class="card  card-cliquable"  id="card-click-body">
+                                <div  style="border-bottom:0">
+                                    <br>
                                     <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                        <i class="thermometer"></i>
+                                        <i class="stretching"></i>
                                     </div>
                                 </div>
-                                Temperature
+                                Body
                                 <div class="card-body ">
                                     <h5 class="card-text">
-                                        <div id="temperature_container"> </div>
+                                        <div > </div>
                                     </h5>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-6">
-                            <div class="card" >
-                                <div class="card-header" style="background-color:white;border-bottom:0">
+                            <div class="card  card-cliquable"  id="card-click-car">
+                                <div  style="border-bottom:0">
+                                    <br>
                                     <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                        <i class="humidity"></i>
+                                        <i class="car"></i>
                                     </div>
                                 </div>
-                                Humidity :
-                                <div class="card-body">
+                                car
+                                <div class="card-body ">
                                     <h5 class="card-text">
-                                        <div id="humidity_container"> </div>
+                                        <div > </div>
                                     </h5>
                                 </div>
                             </div>
@@ -130,164 +115,274 @@
 
 
                 </div>
-            </div>
+
+
+
+                <div id="card-stats-body">
+                    <div class="col-1" id="retour">
+
+                        <div class="moncercle2" style="    margin-left: auto; margin-right: auto;">
+                            <i class="left-arrow"></i>
+
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="foot"></i>
+                                        </div>
+                                    </div>
+                                    Steps :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="steps_information"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="urgency"></i>
+                                        </div>
+                                    </div>
+                                    Distance :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="distance_information"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="weight"></i>
+                                        </div>
+                                    </div>
+                                    Weight:
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="weight_information"> </div>
+
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="thermometer"></i>
+                                        </div>
+                                    </div>
+                                    Temperature :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="temperature_container"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="humidity"></i>
+                                        </div>
+                                    </div>
+                                    Humidity :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="humidity_container"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <br>
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <canvas id="myChart"></canvas>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <br>
+
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <canvas id="myChart3"></canvas>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="card-car">
+                    <div class="col-1" id="retour2">
+
+                        <div class="moncercle2" style="    margin-left: auto; margin-right: auto;">
+                            <i class="left-arrow"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="speed"></i>
+                                        </div>
+                                    </div>
+                                    Maximum Speed :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="information_speed_max"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="humidity"></i>
+                                        </div>
+                                    </div>
+                                    Humidity :
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="humidity_container_car"> </div>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" >
+                                    <div class="card-header" style="background-color:white;border-bottom:0">
+                                        <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
+                                            <i class="thermometer"></i>
+                                        </div>
+                                    </div>
+                                    Temperature:
+                                    <div class="card-body">
+                                        <h5 class="card-text">
+                                            <div id="temperature_container_car"> </div>
+
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <canvas id="myChart4"></canvas>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+
+            <script>
+
+
+            </script>
 
             <!--
-        <div id="menu1" class="tab-pane fade">
-
-            <br>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card" >
-                            <div class="card-header" style="background-color:white;border-bottom:0">
-                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                    <i class="foot"></i>
-                                </div>
-                            </div>
-                            Steps :
-                            <div class="card-body">
-                                    <h5 class="card-text">
-                                        <div id="steps_information"> </div>
-                                    </h5>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-4">
-                            <div class="card" >
-                                <div class="card-header" style="background-color:white;border-bottom:0">
-                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                        <i class="urgency"></i>
-                                    </div>
-                                </div>
-                                Distance :
-                                <div class="card-body">
-                                    <h5 class="card-text">
-                                        <div id="distance_information"> </div>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card" >
-                                <div class="card-header" style="background-color:white;border-bottom:0">
-                                    <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                        <i class="weight"></i>
-                                    </div>
-                                </div>
-                                Weight:
-                                <div class="card-body">
-                                    <h5 class="card-text">
-                                        <div id="weight_information"> </div>
-
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-            <br>
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card" >
-                            <div class="card-header" style="background-color:white;border-bottom:0">
-                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                    <i class="thermometer"></i>
-                                </div>
-                            </div>
-                            Temperature :
-                            <div class="card-body">
-                                <h5 class="card-text">
-                                    <div id="temperature_container"> </div>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="card" >
-                            <div class="card-header" style="background-color:white;border-bottom:0">
-                                <div class="moncercle" style="    margin-left: auto; margin-right: auto;">
-                                    <i class="humidity"></i>
-                                </div>
-                            </div>
-                            Humidity :
-                            <div class="card-body">
-                                <h5 class="card-text">
-                                    <div id="humidity_container"> </div>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-            <br>
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="myChart"></canvas>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="myChart2"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
+        <div id="menu1" class="tab-pane fade"> </div>
 
             <br>
 
 
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <canvas id="myChart3"></canvas>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-            </div>
-
-       </div>
         </div>
 
             -->
     </div>
 
+        <script src="Javascript/main.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="Javascript/Chart.js"></script>
 
-    <script src="Javascript/main.js"></script>
     <script src="Javascript/chatbot.js"></script>
     <script src="Javascript/data_treatment.js"></script>
     <script src="Javascript/graph_treatment.js"></script>

@@ -7,6 +7,7 @@
  var redirect_uri = "http%3A%2F%2Fwww.host"
 
 
+
 function main_function()
 {
 	var input = document.getElementById('question_content').value;
@@ -15,7 +16,13 @@ function main_function()
 
 
 
+    avg_steps_data_treatment();
+    avg_distance_data_treatment();
+    weight_data_treatment();
 
+    temperature_data_treatment();
+    weather_data_treatment();
+    max_speed();
 
 
     if (size!=0)
@@ -63,12 +70,7 @@ function main_function()
 					// Amine function :
 
 
-                    avg_steps_data_treatment();
-                    avg_distance_data_treatment();
-                    weight_data_treatment();
 
-                    temperature_data_treatment();
-                    weather_data_treatment();
 
 
                 }
@@ -104,6 +106,55 @@ function main_function()
 
 }
 
+
+$(document).ready(function(){
+    $('#card-home').show();
+    $('#card-stats-body').hide();
+    $('#card-car').hide();
+
+
+
+});
+
+
+$(document).ready(function(){
+    $('#card-click-body').click(function(){
+        $('#card-home').hide();
+        $('#card-stats-body').show();
+
+    });
+
+});
+
+$(document).ready(function(){
+    $('#card-click-car').click(function(){
+        $('#card-home').hide();
+        $('#card-car').show();
+
+
+
+
+    });
+
+});
+
+$(document).ready(function(){
+    $('#retour').click(function(){
+        $('#card-home').show();
+        $('#card-stats-body').hide();
+
+    });
+
+});
+
+$(document).ready(function(){
+    $('#retour2').click(function(){
+        $('#card-home').show();
+        $('#card-car').hide();
+
+    });
+
+});
 
 /* CONNEXION PART */
 
